@@ -1,0 +1,12 @@
+To count rows automatically in a single column, use: RowCount = Cells(Rows.Count, "A").End(xlUp).Row
+
+To format numbers as percentages, use: Range("C4:C15").NumberFormat = "0.00%"
+
+To format numbers as currency (with a $ sign), use: Range("B4:B15").NumberFormat = "$ ##, ###, ##0.00"
+
+To autofit data in columns, use: Columns("").AutoFit
+
+Declaring a variable as Single = less memory, but no decimal. Double is decimal, but more memory.
+
+Blah blah blah
+
