@@ -24,7 +24,7 @@ Postgress requires column names with foreign/exotic characters to be in quotes
 Tables should have a PRIMARY KEY to identify unique items in dataset
 Limit varchars to save memory
 Don't store data more than once
-Maximize memory efficiency
+Maximize memory efficiency**
 Add timestamps to data updating
 Use integers to indentify data (not strings) to speed up query time
 

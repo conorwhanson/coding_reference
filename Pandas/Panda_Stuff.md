@@ -11,3 +11,6 @@ Perhaps take it into Excel to format
 
 binning done on numerical data to turn into groups. 
 NOTE: You will always have one extra bin than group!!
+
+Cheats:
+pd.options.display.max_colwidth = 100 # display 100 columns
