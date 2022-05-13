@@ -30,7 +30,7 @@ order by de.dept_no;
 -- begin creating 3 lists: 
 -- employee info (emp_no, last, first, gender, salary)
 -- management (managers for each dept, dept_no, name, emp_no, last, first, start and end employment dates)
--- dept retirees (updated current_emp list plus empployee's dept)
+-- dept retirees (updated current_emp list plus employee's dept)
 select e.emp_no, 
 e.first_name, 
 e.last_name,
@@ -71,3 +71,24 @@ inner join dept_emp as de
 on (ce.emp_no = de.emp_no)
 inner join departments as d
 on (de.dept_no = d.dept_no);
+
+-- Employee count by department number
+select count(ce.emp_no), 
+de.dept_no
+from current_emp as ce
+left join dept_emp as de
+on ce.emp_no = de.emp_no
+group by de.dept_no
+order by de.dept_no;
+
+-- Count employees retiring based on dept
+select count(ce.emp_no), 
+de.dept_no,
+d.dept_name
+from current_emp as ce
+left join dept_emp as de
+on ce.emp_no = de.emp_no
+left join departments as d
+on de.dept_no = d.dept_no
+group by de.dept_no, d.dept_name
+order by de.dept_no;
