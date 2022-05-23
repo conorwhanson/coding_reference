@@ -14,7 +14,8 @@ lambda arguments : expression
     - Sets: allows us to match character contained within square brackets (e.g. [bfs]ought)
     - Escaping: allows us to target characters used in regex (e.g. 'bought\.' so it doesn't use the dot)
     - In Pandas, str.contains() works only in Pandas dataframes but references regex's; importing regex as the specific module works on other things.
-    - Groups: 
+    - Groups: identifies a match that is to be extracted out of the string.
+
 NOTE: REGEX ONLY WORKS ON STRINGS
 
 - List comprehensions : uses a conditional expression to do a 1-line for loop, returns a list. Way shorter than a FOR loop.
