@@ -7,7 +7,7 @@ Back to the CompSci basics:
 3. Variables/Data Structure
 4. Functions
 
-JavaScript is the muscle of websites; it powers the actions/interactions.
+JavaScript is the muscle of websites; it powers the actions/interactions. This creates interactive and dynamic websites.
 
 JS very function-heavy***
 
@@ -19,6 +19,12 @@ You need a website to run JS. It's commonly found in HTML.
 
 Logically and syntactically similar to Python.
 E.g.: var name = "Mad Max";
+
+Code blocks are denoted by {}
+
+## Statements & Expressions
+Statements perform actions
+Expressions create values
 
 ## JS Variable
 - var = generic variable irrespective of dtype (Python automatically does this)
