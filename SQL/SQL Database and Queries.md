@@ -46,3 +46,6 @@ Primary Keys -
 Foreign Keys - a column in a secondary table that references (and depends upon) a primary key in another table
 
 To avoid cluster keys, create unique ID int column***
+
+## NoSQL
+SQL database with no predetermined structures/relations; messy data. Data in the form of JSON (nice!)
