@@ -13,7 +13,7 @@ JS very function-heavy***
 
 JS listens for events and responds accordingly. Used to request info from a server. You can also dynamically modify HTML elements (i.e. interact with and respond to user).
 
-With ES6 update it's much easier to code in JS.
+ES6 update was meant to standardize the syntax of JS. This streamlines the coding process, both reading and writing. Shorter code is the big pro here which increases readability, and there are more ways to complete a task. However, the big con is an increase in complexity, and therefore chances for bugs.
 
 You need a website to run JS. It's commonly found in HTML.
 
