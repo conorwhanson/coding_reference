@@ -28,3 +28,13 @@ When scraping, prerendered websites are easy to scrape, but asynchronous website
 Splinter (Selenium): web driver/automated browser for asynchronous websites
 
 When scraping: start small, then iterate and expand. Start in Jupyter Notebook then copy code over to VSCode
+
+HTML Table structure:
+<table>
+	<th> Table Header 
+	</th>
+		<tr> Table Rows 
+		</tr>
+			<td> Table Data 
+			</td>
+</table>

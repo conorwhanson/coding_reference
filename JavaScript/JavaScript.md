@@ -27,9 +27,9 @@ Statements perform actions
 Expressions create values
 
 ## JS Variable
-- var = generic variable irrespective of dtype (Python automatically does this)
-- let = temp variable (for temp i in list:)
-- const = immutable variable
+- var = generic variable irrespective of dtype (Python automatically does this). Can be used in entire program.
+- let = temp variable (for temp i in list:), only available in particular code block.
+- const = immutable variable updated only once.
 
 JS String: console.log(`Hello ${name}!`) 
 
@@ -60,11 +60,34 @@ for (var j = 0: j < students.lengths; j++){
     console.log(students, j;)
 }
 
+for each loop can only be used on lists/arrays:
+
+movieScores.forEach(function(score){
+}
+
+
 ## JS has 3 different equal signs: 
 = assigns value; 
 == equates values only (even 0 == "");  
-=== checks for strict equality (value & dtype)
+=== checks for strict equality (value & dtype);
 
 ## DTypes & Structures
 JS Array === Python list
 JS Objects === Python dicts
+
+In JS dicts you can use dot notation (e.g. dict.name instead of dict['name'] like in Python
+
+D3 a JS library (primarily data-driven) for visualizations to be embedded on a website (not made to create tables or simple tasks in HTML!!!). It is a very large import and has its own syntax.
+
+JQuery a fast, small, lightweight JS library for HTML interaction.
+
+DOM manipulation: manipulate the HTML that appears on the page. JQuery, React, Angular, due.js, node.js ,etc.
+
+## BOOTSTRAP
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+## Event Listeners
+transcends libraries; looks for events/action from user or client that then executes an action.
+2 main components to EL:
+1. Target - reference to the object that did the event/action
+2. Handler - function executed in response to the event/action
