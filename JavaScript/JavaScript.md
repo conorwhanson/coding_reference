@@ -91,3 +91,14 @@ transcends libraries; looks for events/action from user or client that then exec
 2 main components to EL:
 1. Target - reference to the object that did the event/action
 2. Handler - function executed in response to the event/action
+
+## Arrow Functions
+Shorter and more concise function syntax; all arrow functions are anonymous (don't use 'function' before the name since arrow implies a function, remove curly brackets, add an arrow, remove return and/or console.log).
+
+standard function: function square(num) {
+			return num **2;
+			}
+Arrow function: let square = (num) => num **2;
+
+Nested functions require the use of traditional functions**
+			console.log(square(10));
