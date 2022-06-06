@@ -60,11 +60,16 @@ for (var j = 0: j < students.lengths; j++){
     console.log(students, j;)
 }
 
-for each loop can only be used on lists/arrays:
+for each loop can *only* be used on lists/arrays:
 
 movieScores.forEach(function(score){
 }
 
+Use a forEach loop to iterate through array (numbers) and square each one:
+	let numbers = [1,2,3,4,5,6];
+	numbers.forEach(function (element) {
+		console.log(element **2);
+	});
 
 ## JS has 3 different equal signs: 
 = assigns value; 
@@ -99,6 +104,9 @@ standard function: function square(num) {
 			return num **2;
 			}
 Arrow function: let square = (num) => num **2;
+		console.log(square(10));
 
-Nested functions require the use of traditional functions**
-			console.log(square(10));
+
+## Creating Tables
+When appending new data into a table it's always good practice to clear the existing data to remove any filters that would jumble the new data.
+			
