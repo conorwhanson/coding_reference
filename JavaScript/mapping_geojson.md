@@ -20,7 +20,7 @@ L.geoJSON(datasource, {
 ## Map-making steps:
 #### STEP 0. Get the data
 - queryUrl(API) or local data file.
-d3.json(queryUrl or data).then(function(data) {
+  d3.json(queryUrl or data).then(function(data) {
   console.log(data);
 })
 
@@ -34,19 +34,19 @@ d3.json(queryUrl or data).then(function(data) {
 
 #### STEP 2. Make overlay layers
 - examples:
-var earthquakeLayer = L.geoJSON(features, {
+  var earthquakeLayer = L.geoJSON(features, {
       onEachFeature: onEachFeature
   });
 
-d3.json(airportData).then(function(data) {
-  console.log(data);
+  d3.json(airportData).then(function(data) {
+    console.log(data);
   
 #### STEP 3. Create dictionaries for layers
 - var baseMaps = {
       "Street Map": streetmap,
       "Dark Map": darkmap
   };
-var overlayMaps = {
+  var overlayMaps = {
       "Earthquakes": earthquakeLayer
   };
 
