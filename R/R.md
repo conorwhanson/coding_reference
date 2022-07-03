@@ -67,4 +67,5 @@ Normal distribution follows the 68-95-99.7 rule:
 - 95.45% of the data falls within 2 standard deviations
 - 99.73% of the data falls within 3 standard deviations
 
-![normal_distribution]()
+![normal_distribution](https://github.com/conorwhanson/coding_reference/blob/main/R/resources/normal_dist.png)
+
