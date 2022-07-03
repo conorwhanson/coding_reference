@@ -69,3 +69,5 @@ Normal distribution follows the 68-95-99.7 rule:
 
 ![normal_distribution](https://github.com/conorwhanson/coding_reference/blob/main/R/resources/normal_dist.png)
 
+**IF P-VALUE IS GREATER THAN 0.05 THEN DATA IS CONSIDERED NORMALLY DISTRIBUTED**
+

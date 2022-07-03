@@ -1,0 +1,130 @@
+```{r}
+library(ggplot2)
+library(tidyverse)
+```
+
+
+
+```{r, label='plotting with ggplot; import dataset, etc'}
+plt <- ggplot(mpg, aes(x=class)) # import
+
+```
+
+```{r, label='plot the thing'}
+plt + geom_bar()
+```
+```{r, label='plot vehicle count by manufacturer with summarize()'}
+# create the summary table
+mpg_summary <- mpg %>% group_by(manufacturer) %>% summarize(Vehicle_Count=n(), .groups = 'keep')
+```
+
+```{r, label='plot the summary table'}
+# plot dataframe created above
+plt <- ggplot(mpg_summary,aes(x=manufacturer, y=Vehicle_Count))
+plt + geom_col()
+```
+
+
+```{r,label='format chart'}
+plt + geom_col() + xlab("Manufacturing Company") + ylab("Number of Vehicles") + #plot a boxplot with labels
+theme(axis.text.x=element_text(angle=45,hjust=1)) #rotate the x-axis label 45 degrees
+```
+
+```{r, label='line plot'}
+mpg_summary <- subset(mpg,manufacturer=="toyota") %>% group_by(cyl) %>% summarize(Mean_Hwy=mean(hwy), .groups = 'keep') #create summary table
+plt <- ggplot(mpg_summary,aes(x=cyl,y=Mean_Hwy)) #import dataset into ggplot2
+plt + geom_line() + scale_x_discrete(limits=c(4,6,8)) + scale_y_continuous(breaks = c(15:30)) #add line plot with labels
+
+```
+
+```{r,label='scatter'}
+# size of car engine vs city mpg
+plt <- ggplot(mpg,aes(x=displ,y=cty,color=class,shape=drv,size=cty)) #import dataset into ggplot2
+plt + geom_point() + xlab("Engine Size (Liters)") + ylab("City Fuel Efficiency (MPG)")
+```
+
+```{r,label='box plots'}
+plt <- ggplot(mpg,aes(y=hwy)) #import dataset into ggplot2
+plt + geom_boxplot() #add boxplot
+```
+
+```{r}
+plt <- ggplot(mpg,aes(x=manufacturer,y=hwy,color=manufacturer)) #import dataset into ggplot2
+plt + geom_boxplot(show.legend = F, outlier.colour = "black", outlier.shape = 1, linetype = "dotted") + theme(axis.text.x=element_text(angle=45,hjust=1)) #add boxplot and rotate x-axis labels 45 degrees
+```
+
+
+```{r, label='heat map'}
+#create summary table
+mpg_summary <- mpg %>% group_by(class,year) %>% summarize(Mean_Hwy=mean(hwy), .groups = 'keep') 
+
+plt <- ggplot(mpg_summary, aes(x=class,y=factor(year),fill=Mean_Hwy))
+
+#create heatmap with labels
+plt + geom_tile() + labs(x="Vehicle Class",y="Vehicle Year",fill="Mean Highway (MPG)") 
+```
+
+
+```{r}
+#create summary table
+mpg_summary <- mpg %>% group_by(model,year) %>% summarize(Mean_Hwy=mean(hwy), .groups = 'keep') 
+
+plt <- ggplot(mpg_summary, aes(x=model,y=factor(year),fill=Mean_Hwy)) #import dataset into ggplot2
+
+#add heatmap with labels 
+plt + geom_tile() + labs(x="Model",y="Vehicle Year",fill="Mean Highway (MPG)") + theme(axis.text.x = element_text(angle=90,hjust=1,vjust=.5)) #rotate x-axis labels 90 degrees
+
+```
+
+```{r, label='LAYERS'}
+#import dataset into ggplot2
+plt <- ggplot(mpg,aes(x=manufacturer,y=hwy)) 
+
+#add boxplot, rotate x-axis labels 45 degrees, and overlay scatter plot on top
+plt + geom_boxplot() + theme(axis.text.x=element_text(angle=45,hjust=1)) + 
+geom_point() 
+```
+
+```{r}
+mpg_summary <- mpg %>% group_by(class) %>% summarize(Mean_Engine=mean(displ), .groups = 'keep')
+
+plt <- ggplot(mpg_summary,aes(x=class,y=Mean_Engine))
+
+plt + geom_point(size=4) + labs(x="Vehicle Class",y="Mean Engine Size")
+```
+
+```{r}
+mpg_summary <- mpg %>% group_by(class) %>% summarize(Mean_Engine=mean(displ),SD_Engine=sd(displ), .groups = 'keep')
+
+plt <- ggplot(mpg_summary,aes(x=class,y=Mean_Engine))
+
+plt + geom_point(size=4) + labs(x="Vehicle Class",y="Mean Engine Size") + geom_errorbar(aes(ymin=Mean_Engine-SD_Engine,ymax=Mean_Engine+SD_Engine))
+```
+```{r,label='long format faceting'}
+mpg_long <- mpg %>% gather(key="MPG_Type",value="Rating",c(cty,hwy))
+```
+
+```{r}
+plt <- ggplot(mpg_long,aes(x=manufacturer,y=Rating,color=MPG_Type))
+
+plt + geom_boxplot() + theme(axis.text.x=element_text(angle=45,hjust=1))
+```
+
+```{r,label='use facet_wrap to create two box plots with facets'}
+plt <- ggplot(mpg_long,aes(x=manufacturer,y=Rating,color=MPG_Type))
+
+#create multiple boxplots, one for each MPG type
+plt + geom_boxplot() + facet_wrap(vars(MPG_Type)) + theme(axis.text.x=element_text(angle=45,hjust=1),legend.position = "none") + xlab("Manufacturer")
+```
+
+```{r, label='QUALITATIVE TEST FOR NORMALITY'}
+# visually assess shape and distribution of data
+ggplot(mtcars,aes(x=wt)) + geom_density()
+
+```
+
+```{r, label='QUANTITATIVE TEST FOR NORMALITY'}
+# quantitative test of whether or not the test data came from a normally distributed data set
+shapiro.test(mtcars$wt)
+```
+
