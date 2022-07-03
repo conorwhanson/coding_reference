@@ -12,6 +12,7 @@ R is built on 2 fundamentals: data structures & functions.
 
 ### Functions
 structure of functions in R similar to Python:
+
 function_name <- function(arg1, arg2=T, ...) {
     BODY OF FUNCTION
 
