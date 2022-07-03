@@ -96,3 +96,9 @@ How does this represent the population dataset?? **Compare mean & standard devia
 How strongly or weakly two variables are related. Calculated with correlation coefficient (denoted as r, negative or positive depending on direction of relationship)
 
 ![correlation](https://github.com/conorwhanson/coding_reference/blob/main/R/resources/Pearson_corr_coeff.png)
+
+### Linear Regression
+A statistical model used to predict a continuous dependent var based on 1 (or more) independent cars fitted to an equation line.
+
+![line_equation](https://github.com/conorwhanson/coding_reference/blob/main/R/resources/ymxb.png)
+
