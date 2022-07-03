@@ -71,6 +71,8 @@ Normal distribution follows the 68-95-99.7 rule:
 
 **IF P-VALUE IS GREATER THAN 0.05 THEN DATA IS CONSIDERED NORMALLY DISTRIBUTED**
 
+![p_value](https://github.com/conorwhanson/coding_reference/blob/main/R/resources/p_value_significance.png)
+
 ### One-tailed vs. Two-tailed test
 - One-tailed describes one side of the distribution ("x is greater/less than y")
     - If the hypotheses and stats test are two-tailed then use the p-value from stats test AS-IS
@@ -92,4 +94,4 @@ How does this represent the population dataset?? **Compare mean & standard devia
 ### Correlation
 How strongly or weakly two variables are related. Calculated with correlation coefficient (denoted as r, negative or positive depending on direction of relationship)
 
-
+![correlation](https://github.com/conorwhanson/coding_reference/blob/main/R/resources/Pearson_corr_coeff.png)
