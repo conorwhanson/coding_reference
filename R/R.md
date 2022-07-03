@@ -102,3 +102,7 @@ A statistical model used to predict a continuous dependent var based on 1 (or mo
 
 ![line_equation](https://github.com/conorwhanson/coding_reference/blob/main/R/resources/ymxb.png)
 
+Simple linear regression model: 1 independent variable
+Multiple linear regression model: 2 or more independent variables
+
+Uses: predictive modeling, explore variability of 2 correlated variables.

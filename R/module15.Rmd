@@ -128,3 +128,134 @@ ggplot(mtcars,aes(x=wt)) + geom_density()
 shapiro.test(mtcars$wt)
 ```
 
+```{r, label='SAMPLING DATASET'}
+# first visualize distribution of data
+population_table <- read.csv('used_car_data.csv',check.names = F,stringsAsFactors = F)
+
+plt <- ggplot(population_table,aes(x=log10(Miles_Driven)))
+
+plt + geom_density()
+
+```
+
+```{r, label = 'SAMPLE DATA WITH SAMPLE_N()'}
+# randomly select 50 data points from population_table
+sample_table <- population_table %>% sample_n(50)
+
+plt <- ggplot(sample_table,aes(x=log10(Miles_Driven)))
+
+plt + geom_density()
+```
+
+```{r, label = 'ONE SAMPLE T-TEST'}
+# one of the most basic and popular stats tests in the world. Used to compare one dataset mean to another w/ some assumptions
+t.test(log10(sample_table$Miles_Driven),mu=mean(log10(population_table$Miles_Driven)))
+
+# P-VALUE IS HIGH, SO TWO MEANS OF RESPECTIVE DATASETS ARE STATISTICALLY SIMILAR**********
+```
+
+```{r, label = 'TWO SAMPLE T-TEST'}
+# compares TWO sample means to one another to determine if they are statistically different
+sample_table <- population_table %>% sample_n(50)
+
+sample_table2 <- population_table %>% sample_n(50)
+
+t.test(log10(sample_table$Miles_Driven),log10(sample_table2$Miles_Driven))
+```
+
+```{r, label = 'PAIR T-TEST'}
+# use two-sample t-test to compare samples from TWO different populations
+mpg_data <- read.csv('mpg_modified.csv')
+mpg_1999 <- mpg_data %>% filter(year==1999)
+mpg_2008 <- mpg_data %>% filter(year==2008)
+
+t.test(mpg_1999$hwy,mpg_2008$hwy,paired = T)
+```
+
+```{r, label='ANOVA TEST'}
+# Analysis of Variance compares means of a continuous numerical variables across a number of groups
+# One-way ANOVA: test the means of 1 independent var across 1 independent var w/ multiple groups
+# Two-way ANOVA: same thing, but for 2 independent vars
+
+mtcars_filt <- mtcars[,c("hp", "cyl")] # filter columns from dataset
+mtcars_filt$cyl <- factor(mtcars_filt$cyl) # convert numeric column to factor
+
+summary(aov(hp ~ cyl,data = mtcars_filt))
+
+## Results show a p-value of .0000000132, which means we can reject the null hypothesis and say that there is a statistically significant difference in hp between at least 1 engine type compared to others.
+```
+
+```{r, label = 'CORRELATION COEFFICIENT'}
+plt <- ggplot(mtcars,aes(x=hp,y=qsec))
+plt + geom_point()
+
+# RESULTS: negative correlation between quarter-mile time and horsepower (hp increases as qsec decreases)
+```
+
+
+```{r}
+cor(mtcars$hp,mtcars$qsec)
+
+# STRONG NEGATIVE CORRELATION
+```
+
+
+```{r}
+used_cars <- read.csv('used_car_data.csv',stringsAsFactors = F)
+head(used_cars)
+```
+
+
+```{r}
+# Are miles driven and selling price correlated?
+plt <- ggplot(used_cars,aes(x=Miles_Driven,y=Selling_Price))
+plt + geom_point()
+```
+
+
+```{r}
+cor(used_cars$Miles_Driven,used_cars$Selling_Price)
+
+# RESULTS: Negligible correlation 
+```
+
+
+```{r, label = 'USE CORRELATION MATRIX'}
+# correlation matrix allows us to see the correlation coefficients as rows/cols of the dataset base on user input of dataset columns
+used_matrix <- as.matrix(used_cars[,c("Selling_Price","Present_Price","Miles_Driven")])
+cor(used_matrix)
+```
+
+
+```{r, label = 'LINEAR REGRESSION'}
+lm(qsec ~ hp,mtcars)
+# linear regression model for this would be: qsec = -0.02 + 20.56
+```
+
+
+```{r}
+# summary of linear regression model
+summary(lm(qsec ~ hp,mtcars))
+
+
+# RESULTS: multiple R-squared = .5016 meaning 50% of dependent var (qsec) explained with this linear model.
+# p-value = 0.00000577, slope is NOT zero and can reject null hypothesis.
+```
+
+
+```{r, label = 'visualize linear regression line over scatter'}
+# creare linear model
+model <- lm(qsec ~ hp,mtcars)
+
+# determine y-axis values from linear model
+yvals <- model$coefficients['hp']*mtcars$hp + model$coefficients['(Intercept)']
+
+plt <- ggplot(mtcars,aes(x=hp,y=qsec))
+plt + geom_point() + geom_line(aes(y=yvals), color='red')
+```
+
+```{r, label = 'MULTIPLE LINEAR REGRESSION'}
+lm(qsec ~ mpg + disp + drat + wt + hp,data=mtcars)
+summary(lm(qsec ~ mpg + disp + drat + wt + hp,data=mtcars))
+```
+
