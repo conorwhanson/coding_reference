@@ -52,12 +52,12 @@ What if you have a lot of samples to comapre? Use ANOVA (Analysis of variance)
 ANOVA compares means across all samples and detertimes if there is a significant difference in at least one sample. The ANOVA test is based on a null-hypothesis (i.e. there is no significant difference between groups).
 
 ### Statistical Data Types
-##### Categorical: qualitative and descriptive data characteristics
+#### Categorical: qualitative and descriptive data characteristics
 - Dichotomous: data collected from either 1 of 2 categories (binary).
 - Ordinal: ranked order/value scale.
 - Nominal: names/labels for other measures.
 
-##### Numeric: quantitative measurement upon which analysis can be done
+#### Numeric: quantitative measurement upon which analysis can be done
 - Continuous: able to be infinitely subdivided. Typically uses decimal places.
 - Interval: data spaced out evenly on a scale, but does not use decimal places. It cannot be multiplied or divided, however it can be grouped together in buckets. AKA integer data.
 
