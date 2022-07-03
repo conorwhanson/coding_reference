@@ -46,7 +46,7 @@ Steps for Testing Hypothesis:
 - identify appropriate statistical test(s)
 - determine acceptable significance
 - compute the p-value
-- 
+- reject (or fail to reject) the null hypothesis and generate conclusion
 
 What if you have a lot of samples to comapre? Use ANOVA (Analysis of variance)
 ANOVA compares means across all samples and detertimes if there is a significant difference in at least one sample. The ANOVA test is based on a null-hypothesis (i.e. there is no significant difference between groups).
@@ -70,4 +70,26 @@ Normal distribution follows the 68-95-99.7 rule:
 ![normal_distribution](https://github.com/conorwhanson/coding_reference/blob/main/R/resources/normal_dist.png)
 
 **IF P-VALUE IS GREATER THAN 0.05 THEN DATA IS CONSIDERED NORMALLY DISTRIBUTED**
+
+### One-tailed vs. Two-tailed test
+- One-tailed describes one side of the distribution ("x is greater/less than y")
+    - If the hypotheses and stats test are two-tailed then use the p-value from stats test AS-IS
+- Two-tailed describes both sides of distribution ("x is not/equal to y")
+    - If the hypotheses one-tailed but stats test two-tailed then divide stats test p-value by 2
+
+### Errors
+- Type 1: false positive; we reject the null hypothesis when it is true (i.e. actually chance but we attributed it to something else)
+- Type 2: false negative; we fail to reject the null hypothesis when it is false (i.e. assume it was chance, but it wasn't)
+
+### Dataset ideals
+**Population dataset** is one that contains measurements from every possible outcome, circumstance, condition, etc. All possible elements inculded.
+
+**Sample** is a subset of the population dataset. 
+
+How does this represent the population dataset?? **Compare mean & standard deviation of each via random sampling**
+(do this via sample() or sample_n() from dplyr library)
+
+### Correlation
+How strongly or weakly two variables are related. Calculated with correlation coefficient (denoted as r, negative or positive depending on direction of relationship)
+
 
