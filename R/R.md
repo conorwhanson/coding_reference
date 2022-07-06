@@ -40,6 +40,9 @@ e.g. precipitation %>% sd() %>% round(2) * this rounds the standard deviation to
 Typical flow: 
 EDA --> Hypothesis --> Experiment --> Hypothesis testing --> Results (return to EDA/reformulate Hypothesis if it wasn't supported in the results)
 
+**Frequentist vs Bayesian statistics**
+- P-values are not hard-and-fast; just shows the likelihood of a relationship between groups. Bayesian a priori helps put this in perspective.
+
 Goal is to reject Null Hypothesis, but it's never absolute.
 
 Steps for Testing Hypothesis:
@@ -106,3 +109,26 @@ Simple linear regression model: 1 independent variable
 Multiple linear regression model: 2 or more independent variables
 
 Uses: predictive modeling, explore variability of 2 correlated variables.
+
+### Chi-squared Test
+Used to compare distribution of frequencies of categorical data across two groups. 
+
+Dataset **must** meet the following suppositions:
+1. Each subject in the group contributes to **only one** frequency (i.e. sum of frequencies = total # of subjects in the dataset)
+2. Each unique value's observation is equally probable
+3. A minimum of **5** observed instances per unique value (in a 2x2 chi-squared table)
+4. With larger tables there must be at least 1 observation for every unique value & >= 80% of all unique values have >=5 observations.
+
+### A/B Testing
+A randomized controlled experiment using an A group (unchanged) and a B group (changed) to test potential changes with a success metric.
+
+A stronger expected effect size requires fewer data points.
+
+### Asking the Right Questions is Crucial
+
+Are 2 groups statistically different? **T-Test with 1 dichotomous independent var and 1 continuous dependent var**
+
+Can a single continuous dependent var be predicted using 1 other independent var? Multiple independent vars with 1 dependent? **Regression Analysis**
+
+Are multiple categorical variables closely linked in a dataset? Are these distributions equal in frequency? **Chi-Squared test**
+

@@ -3,9 +3,10 @@
 
 Data is considered "big" when it exceeds the capacity of operational (i.e. local) databases.
 
-### The Four Vs
+### The Five Vs
 - **Volume** is the size of the data (e.g. terabytes)
 - **Velocity** is how fast data is collecte
+- **Value** is what the data is for (i.e. decision making)
 - **Variety** is the various forms of data (e.g. account info, product review, favorited, etc)
 - **Veracity** is the truthfulness/uncertainty of the data (e.g. reviews could be from bots)
 
@@ -33,3 +34,5 @@ Spark allows for API calls via a number of languages within it, which it transla
 2. High-level API: deals with structured data like CSVs.
 
 **Google Colab** is a cloud-based notebook for sharing/collaborating on work.
+
+**PySpark** is Python API for Spark for big data analysis.
