@@ -36,3 +36,22 @@ Spark allows for API calls via a number of languages within it, which it transla
 **Google Colab** is a cloud-based notebook for sharing/collaborating on work.
 
 **PySpark** is Python API for Spark for big data analysis.
+
+**NLP (Natural Language Processing)**
+    - Tokens are building blocks of an NLP object.
+    - General word cleaning used for removing conjugations, stemming, etc.
+    - Frequency counts of words.
+    - Stopwords are words that are **not** nouns, verbs, adjectives, adverbs, etc. NLP tries to remove these if possible.
+    - TF-IDF: Term Frequency/Inverse Document Frequency. Terms with high TF-IDF are found in one document and not in others within a given corpus.
+
+    - Typical NLP Pipeline:
+        1. Raw text input
+        2. tokenize: separate words from paragraphs/sentences into individual units.
+        3. stop words/filtering
+        4. TF-IDF: statistically rank words by importance relative to other words present in the rest of the document. Here is where words get converted to NUM83R5.
+        5. Machine Learning
+
+**Sentiment Analysis** tries to analyze the sentiment or emotion in sentences. Very challenging, specifically as language changes, uses of sarcasm/irony/metaphor, but also who builds it and how.
+
+**AWS** Amazon Web Service
+    - ETL on AWS: Cloud storage uses buckets (distributed) to store files/data. Each folder or file within a bucket can be access-controlled (fine-grained), but universal access can be given as well.

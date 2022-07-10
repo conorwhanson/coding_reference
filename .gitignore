@@ -9,6 +9,9 @@ __pycache__/
 # .DS_Store
 .DS_Store
 
+# Files
+2012_stage_2.csv
+
 # Distribution / packaging
 .Python
 build/
