@@ -4,9 +4,10 @@ Using statistical algorithms to perform tasks, but specifically to learn from da
 What does it mean for a machine to "learn"? **The ML algorithms use training data to set their internal parameters.**
 
 Basic ML flow:
-1. ML model is given a dataset
-2. ML algorithm analyzes the data, attempting to identify patterns.
-3. Based on patterns found the model makes predictions on new data.
+1. EDA
+2. ML model is given a dataset
+3. ML algorithm analyzes the data, attempting to identify patterns.
+4. Based on patterns found the model makes predictions on new data.
 
 OR
 
@@ -46,8 +47,10 @@ Residuals are used to determine the difference between predicted **y** and obser
 
 Whole point of ML is to predict the target most effectively. Which models do this best/with the highest success rates, etc.
 
+**Visualize each model**
+
 Models are only as good as input data; data cleaning is crucial.
 
-For Regression models: R-squared
+For Regression models: R-squared, MSE (avg squared error), RMSE (squre root of MSE; can be comapred to MAE), and MAE (avg absolute error). These metrics summarize how close predicted values are to actual values. MSE and MAE comapre models against one another.
 
-For Logistics: 
+**RMSE > MAE = large errors happened**
