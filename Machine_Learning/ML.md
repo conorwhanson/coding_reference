@@ -1,22 +1,34 @@
 ## Machine Learning Fundamentals
-Using statistical algorithms to perform tasks, but specifically to learn from data patterns for making future predictions.
+Using statistical algorithms to perform tasks, but specifically to learn from data **patterns** for making future predictions. Machine Learning is fundamentally about **predictive analytics**.
+
+What does it mean for a machine to "learn"? **The ML algorithms use training data to set their internal parameters.**
 
 Basic ML flow:
 1. ML model is given a dataset
 2. ML algorithm analyzes the data, attempting to identify patterns.
 3. Based on patterns found the model makes predictions on new data.
 
+OR
+
+1. Model
+2. Fit(train)
+3. Predict
+
 #### Generally there are 3 ML categories:
 
-1. **Supervised** deals with labeled data. Dataset divided into features (variables for prediction) and targets (predicted outcome(s))
+1. **Supervised** deals with labeled data. Dataset divided into features (variables for prediction) and targets (predicted outcome(s)). This is the most common ML algorithm.
     - Linear Regression: prediction based on continuous variables (i.e. numeric data)
+
         - basic pattern for linear regression:
         1. Split the data into input (X) and output (y)
         2. Create an instance of the model (model = LinearRegression())
         3. Train the model with the given data (model.fit(X,y))
         4. Generate predictions via output_predit = model.predict(X)
 
-    - Classification: prediction based on discrete outcomes where outcome is assigned to a class (either in the class or out, Y or N. **must clear a probability cutoff point**). Primarily differentiated from regression by a binary outcome (often called Logistic Regression). Statifing the data here is important, especially if the input/output are disproportionate.
+        Multiple Linear Regression can be used for multiple features.
+
+    - Classification: prediction probability based on discrete outcomes where outcome is assigned to a class (either in the class or out, Y or N. **Must clear a probability cutoff point**). Primarily differentiated from regression by a binary outcome (often called Logistic Regression). Stratifing the data here is important, especially if the input/output are disproportionate.
+
         - basic steps for logistic regression:
         1. Create the model with LinearRegression()
         2. train the model with model.fit()
@@ -24,4 +36,18 @@ Basic ML flow:
         4. Validate model accuracy with accuracy_score()
 
 2. **Unsupervised** deals with data without labeled outcomes (finds patterns given the dataset itself)
-3. **Deep** 
+    - Clustering: these data are close to one another but no labels/correlations. 
+    - Dimensionality Reduction: reduces the number of data input variables in a particular dataset, which still allows for meaningful predictive outcomes.
+3. **Deep/Neural Net** 
+
+
+#### Evaluating Models
+Residuals are used to determine the difference between predicted **y** and observed **y**.
+
+Whole point of ML is to predict the target most effectively. Which models do this best/with the highest success rates, etc.
+
+Models are only as good as input data; data cleaning is crucial.
+
+For Regression models: R-squared
+
+For Logistics: 
