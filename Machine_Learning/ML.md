@@ -13,6 +13,7 @@ OR
 
 1. Model
 2. Fit(train)
+    - watch for overfitting! This indicates the training set is finding patterns that are not present in the data set.
 3. Predict
 
 #### Generally there are 3 ML categories:
@@ -51,6 +52,29 @@ Whole point of ML is to predict the target most effectively. Which models do thi
 
 Models are only as good as input data; data cleaning is crucial.
 
-For Regression models: R-squared, MSE (avg squared error), RMSE (squre root of MSE; can be comapred to MAE), and MAE (avg absolute error). These metrics summarize how close predicted values are to actual values. MSE and MAE comapre models against one another.
+For Regression models: 
+- R-squared (% of features explained by the model)
+- MSE (avg squared error) & MAE (avg absolute error) compare models to one another. Closer to 0 the better**
+- RMSE (squre root of MSE; can be comapred to MAE). These metrics summarize how close predicted values are to actual values.
+- Residual helps to see over/under predicting.
 
 **RMSE > MAE = large errors happened**
+
+**Regularization**
+
+**Precision vs. Sensitivity**
+- Precision, aka Positive Predictive Value (PPV), is the result of dividing True Positives (TP) by all positives, both TP and FP. Answers the question: "how likely is this?"
+
+- Sensitivity, aka recall, is how likely the classification has been assigned properly (i.e. how likely the test will correctly diagnose cancer).
+
+**Trade-off often required between these two**
+While high sensitivity helps catch everything, it can be more aggressive and falsely attribute positives. Precision will be more likely to be a true positive, but much more conservative in its process and therefore miss others beyond the target range.
+
+**F1 (Harmonic Mean)** is a single summary stat of precision and sensitivity.
+
+![classification_perf]()
+
+
+
+#### Tree-based Algorithms
+A decison tree uses conditional statements to encode true/false questions.
