@@ -74,6 +74,10 @@ While high sensitivity helps catch everything, it can be more aggressive and fal
 
 ![classification_perf](https://github.com/conorwhanson/coding_reference/blob/main/Machine_Learning/Classification_perf_assesment.png)
 
+**Support Vector Machine** separates dataset into two classes with the widest possible margins, which can allow for outlier exceptions (with 'soft' margins).
+
+![SVM]()
+
 
 
 #### Tree-based Algorithms
