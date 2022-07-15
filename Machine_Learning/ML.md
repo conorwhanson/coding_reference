@@ -72,7 +72,7 @@ While high sensitivity helps catch everything, it can be more aggressive and fal
 
 **F1 (Harmonic Mean)** is a single summary stat of precision and sensitivity.
 
-![classification_perf]()
+![classification_perf](https://github.com/conorwhanson/coding_reference/blob/main/Machine_Learning/Classification_perf_assesment.png)
 
 
 
