@@ -76,7 +76,9 @@ While high sensitivity helps catch everything, it can be more aggressive and fal
 
 **Support Vector Machine** separates dataset into two classes with the widest possible margins, which can allow for outlier exceptions (with 'soft' margins).
 
-![SVM]()
+|-------------|---------------|
+![SVM](https://github.com/conorwhanson/coding_reference/blob/main/Machine_Learning/support_vector.png)
+| ![soft_margins](https://github.com/conorwhanson/coding_reference/blob/main/Machine_Learning/soft_margin_SVM.png)
 
 
 
