@@ -11,6 +11,7 @@ __pycache__/
 
 # Files
 2012_stage_2.csv
+iris.csv
 
 # Distribution / packaging
 .Python
