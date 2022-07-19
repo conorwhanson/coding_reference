@@ -14,3 +14,15 @@ Prior to running Unsupervised algorithms we need to
 **Select** data => make choices about which data to use/include.
 **Process** data => organize data (format, clean, sample, etc).
 **Transform** data => for ease of future use; format into database, spreadsheet, csv, etc.
+
+#### K-means algorithm for clustering
+This algorithm groups data into K-clusters based on a shared characteristic or distance from a centroid (center mass of density). Centeroid is found via the mean of both the x and y values in a cluster.
+
+**K-means = mean of all X values and the mean of all Y values.**
+
+#### Elbow Curve
+Method to determine best number of K-mean clusters.
+
+**LOOK FOR WHERE THE VERTICAL LINE SHIFTS TO HORIZONTAL**
+
+**Interia** objective functuon measures the amount of variance in a dataset. For the elbow curve you plot the # of clusters (or K values) on the X-axis and the interia values on y-axis.
