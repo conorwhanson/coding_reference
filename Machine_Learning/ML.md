@@ -82,4 +82,17 @@ While high sensitivity helps catch everything, it can be more aggressive and fal
 ![soft_margins](https://github.com/conorwhanson/coding_reference/blob/main/Machine_Learning/soft_margin_SVM.png)
 
 #### Tree-based Algorithms
-A decison tree uses conditional statements to encode true/false questions.
+A decison tree uses conditional statements to encode true/false questions. 
+
+A **random-forest** combines many decision trees to strengthen the model. However, these can be prone to overfitting.
+
+#### Boostrap Aggregation (Bagging)
+An ensemble learning technique that combines weak learners into a strong learner.
+
+Made of 2 parts:
+1. Boostrapping - a sampling technique that randomly selects samples and then return them to the general pool. This makes it possible to draw the same sample again.
+
+2. Aggregation - various classifiers are run and the results are aggregated with a voting process. Each classifier "votes" for a prediction, and the final prediction is the one with more votes.
+
+#### Boosting
+Weak learners => strong learners, but done sequentially instead of simultaneously. The next model learns from the mistakes of the previous one.
