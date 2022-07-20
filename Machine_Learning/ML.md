@@ -40,7 +40,8 @@ OR
 2. **Unsupervised** deals with data without labeled outcomes (finds patterns given the dataset itself)
     - Clustering: these data are close to one another but no labels/correlations. 
     - Dimensionality Reduction: reduces the number of data input variables in a particular dataset, which still allows for meaningful predictive outcomes.
-3. **Deep/Neural Net** 
+
+3. **Reinforcement** 
 
 
 #### Evaluating Models
@@ -79,8 +80,6 @@ While high sensitivity helps catch everything, it can be more aggressive and fal
 ![SVM](https://github.com/conorwhanson/coding_reference/blob/main/Machine_Learning/support_vector.png)
 
 ![soft_margins](https://github.com/conorwhanson/coding_reference/blob/main/Machine_Learning/soft_margin_SVM.png)
-
-
 
 #### Tree-based Algorithms
 A decison tree uses conditional statements to encode true/false questions.
