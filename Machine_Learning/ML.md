@@ -96,3 +96,13 @@ Made of 2 parts:
 
 #### Boosting
 Weak learners => strong learners, but done sequentially instead of simultaneously. The next model learns from the mistakes of the previous one.
+
+#### Dealing with class imbalance
+- Oversampling: choose more instances from the class to train the model.
+    - Random oversampling: instances of minority class (which already exist) are taken randomly until classes are balanced.
+    - Synthetic minority oversampling technique (SMOTE): synthetically interpolates data points from the minority dataset and adds them into the minority set. **This doesn't work well with outliers**
+    - SMOTEEN: SMOTE + Edited Nearest Neighbors (ENN). Step 1: oversample minority with SMOTE; Step 2: clean result with undersampling, and if the 2 nearest neighbor data points are 2 diff classes, then drop it.
+    **The deficiencies in a dataset cannot be overcome with lots of modeling!!**
+
+- Undersampling: takes a smaller number of data points from the majority class to balance the classes.
+- Combo
