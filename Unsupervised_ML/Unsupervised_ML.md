@@ -13,7 +13,10 @@ Unsupervised learning can help to explore data if you're not sure what you're lo
 Prior to running Unsupervised algorithms we need to:
 
 **Select** data => make choices about which data to use/include.
-**Process** data => organize data (format, clean, sample, drop nulls, dimensionality reduction, label encoding/one hot encoding, scaling, etc).
+**Process/Clean** data => organize data (format, clean, sample, fixing nulls, dimensionality reduction, encode categorical data, scaling (not encoded data!!), etc).
+    - Scaling: normalizes data to produce a non-skewed data set. **Crucial for linear models**
+    - Independence of input features: ensure each input feature is completely independent from one another. This is almost always impossible. Multiple correlations can exist in features (called multicollinearity). 
+    - Dimensionality Reduction: Removes dimensions (features) to simplify dataset, but leaves you with less data with which to predict. More variance of information = better sample.
 **Transform** data => for ease of future use; format into database, spreadsheet, csv, etc.
 
 #### K-means algorithm for clustering
@@ -34,3 +37,18 @@ Method to determine best number of K-mean clusters.
 
 #### Silhouette Score
 How much overlap is there between groups? This can help evaluate the fit of the clusters.
+
+A silhouette score closer to 1 is best, but if 2 clusters are coming in as best it's probably not a good idea to use clustering.
+
+#### Princial Component Analysis (PCA) & Hierarchical Clustering
+Prof Booth on PCA: overly complicated for something that doesn't matter.
+
+PCA results in data features that are **independet** by converting them to components via math witchcraft. These can then be used in linear models.
+
+Hierarchical clustering starts at the bottom and joins them together as it moves up the chain. There is only one answer within a hierarchical cluster model. However, subjective where cluster borders are. This differs from K-means where clusters can be changed to find the optimal K.
+
+#### DBSCAN
+Computationally heavy, but helps deal with the uncertain data points (which cluster??). Data point is un-clusterable.
+
+#### Gaussian Clustering
+Attaches a probability to each point in a cluster (how likely it is to be in a particular cluster)
