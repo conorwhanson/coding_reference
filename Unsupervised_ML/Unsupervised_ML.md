@@ -16,7 +16,7 @@ Prior to running Unsupervised algorithms we need to:
 **Process/Clean** data => organize data (format, clean, sample, fixing nulls, dimensionality reduction, encode categorical data, scaling (not encoded data!!), etc).
     - Scaling: normalizes data to produce a non-skewed data set. **Crucial for linear models**
     - Independence of input features: ensure each input feature is completely independent from one another. This is almost always impossible. Multiple correlations can exist in features (called multicollinearity). 
-    - Dimensionality Reduction: Removes dimensions (features) to simplify dataset, but leaves you with less data with which to predict. More variance of information = better sample.
+    - Dimensionality Reduction: Removes dimensions (features) to simplify dataset, but leaves you with less data with which to predict. More variance of information = better sample, but could also make the model prone to overfitting.
 **Transform** data => for ease of future use; format into database, spreadsheet, csv, etc.
 
 #### K-means algorithm for clustering
