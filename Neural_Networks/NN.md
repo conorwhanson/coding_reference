@@ -8,8 +8,11 @@ Pros:
 - Good at handling messy or noisy data.
 
 Cons:
-- Prone to overfitting.
+- Prone to overfitting (especially with many hidden layers).
+- Can use too many computational resources if the model is too complex.
 - Too complex to understand.
+
+Good rule of thumb: have 2-3x the number of neurons (hidden layers) as the number of inputs.
 
 ### Perceptron model
 
@@ -40,12 +43,21 @@ What if each neuron has its own output? How are they combined into a single clas
 
 An **Activation function** is applied to the end of each neuron (or perceptron model) which transforms the output into a quantitative value. This is then used as an input for other neural network layers. A number of functions exist:
 
-**Linear function** returns the sum of weighted inputs and does not transform them.
-**Sigmoid function** is an S-curve that transforms output to a range of 0 to 1.
-**Tanh function** is also an S-curve, but transforms output to a range of -1 to 1.
-**Rectified Linear Unit (ReLU) function** returns a value from 0 to infinity, and any negative input passed through the function becomes 0. Good for a simple output, but not for simpler models.
-**Leaky ReLU function** is an alternative to ReLU where the negative inputs are transformed into small negative values.
+- **Linear function** returns the sum of weighted inputs and does not transform them.
+- **Sigmoid function** is an S-curve that transforms output to a range of 0 to 1. Ideal for binary classification.
+- **Tanh function** is also an S-curve, but transforms output to a range of -1 to 1. Useful for classification or regression.
+- **Rectified Linear Unit (ReLU) function** returns a value from 0 to infinity, and any negative input passed through the function becomes 0. Good for a simple output, but not for simpler models. Good for looking at positive nonlinear data for classification or regression.
+- **Leaky ReLU function** is an alternative to ReLU where the negative inputs are transformed into small negative values. Good alternative for nonlinear data with many negative numeric inputs.
 
 **Loss** is a metric used to represent the model's ability to predict a single data point. Lower = better.
 
 **Evaluation metric** measures how well or porrly the model characterizes data after each iteration.
+
+**When a model doesn't perform as expected look at either 1) the model design (inadequate or inappropriate) or 2) the training data (insufficient or ineffective).**
+
+### Optimizing a Neural Network
+- Verify input data
+- Increase hidden layer neurons
+- Add more hidden layers (more computation on same amount of data*)
+- Try different activation functions for the hidden layers
+- Increase epochs for training regimen
