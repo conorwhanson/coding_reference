@@ -47,3 +47,5 @@ An **Activation function** is applied to the end of each neuron (or perceptron m
 **Leaky ReLU function** is an alternative to ReLU where the negative inputs are transformed into small negative values.
 
 **Loss** is a metric used to represent the model's ability to predict a single data point. Lower = better.
+
+**Evaluation metric** measures how well or porrly the model characterizes data after each iteration.
