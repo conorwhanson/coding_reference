@@ -1,25 +1,28 @@
 
 # Artificial Neural Networks (ANN)
 
-Set of algorithms modeled after the human brain (neurons).
+Set of algorithms modeled after the human brain (neurons). Basic structure is **nodes**.
 
 Pros:
-- Can be very good at detecting complex, nonlinear relationships in data.
+- Can be very good at detecting complex, nonlinear relationships or patterns in data.
 - Good at handling messy or noisy data.
+- Can take images as inputs(!)
 
 Cons:
-- Prone to overfitting (especially with many hidden layers).
+- Prone to overfitting (especially with many hidden layers or small amounts of data).
 - Can use too many computational resources if the model is too complex.
 - Too complex to understand.
 
 Good rule of thumb: have 2-3x the number of neurons (hidden layers) as the number of inputs.
 
+**Forward/Backward propogation: run model (inputs go forward), evaluate output, send the output back to tune model (backward).**
+
 ### Perceptron model
 
-A single neural network unit (mimics a biological neuron) that takes in data, weighs it, and produces an output. It is made of 4 components:
+A single neural network node (mimics a biological neuron) that takes in data, weighs it, and produces an output. A single perceptron is essentially a linear model (good at a linear regression!). It is made of 4 components:
 
 1. **Input values** (often labeled x or χ)
-2. **Weight coefficient** (often labeled w or ω)
+2. **Weight coefficient** (often labeled w or ω) is a value given to 1) the neuron and 2) the feature or the algorithm, based on their performance.
 3. **Bias** - a constant added to the input to influence the final decision. This "stirs the pot" so to speak. This will be an additional variable added to the number of input variables.
 4. **Net summary function** - aggregates all of the weighted inputs.
 
@@ -41,7 +44,7 @@ Consist of 3 layers:
 
 What if each neuron has its own output? How are they combined into a single classification/regression model?
 
-An **Activation function** is applied to the end of each neuron (or perceptron model) which transforms the output into a quantitative value. This is then used as an input for other neural network layers. A number of functions exist:
+An **Activation function** is applied to the end of each neuron (or perceptron model) which transforms the output into a quantitative value. Is it a linear regression or classifcation? Function chosen based on this. This is then used as an input for other neural network layers. **NOTE: The final layer of nodes/neurons is where the activation function is really important**. A number of functions exist:
 
 - **Linear function** returns the sum of weighted inputs and does not transform them.
 - **Sigmoid function** is an S-curve that transforms output to a range of 0 to 1. Ideal for binary classification.
