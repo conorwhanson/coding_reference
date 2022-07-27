@@ -64,3 +64,15 @@ An **Activation function** is applied to the end of each neuron (or perceptron m
 - Add more hidden layers (more computation on same amount of data*)
 - Try different activation functions for the hidden layers
 - Increase epochs for training regimen
+
+### Keras
+
+**Behind the scenes this is what builds the neural networks**
+
+Using Tensorflow is a UI that then translates into Keras to build & run the neural networks.
+
+### Shallow Neural Network
+1 Layer of nodes.
+
+### Deep Neural Network
+2 or more hidden layers of nodes.
