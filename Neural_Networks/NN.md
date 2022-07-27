@@ -28,7 +28,7 @@ A single neural network node (mimics a biological neuron) that takes in data, we
 
 Perceptron models are commonly used as a **linear binary classifier** (two groups that can be separated using a linear equation)
 
-![perceptron_model]()
+![perceptron_model](https://github.com/conorwhanson/coding_reference/blob/main/Neural_Networks/resources/perceptron_model.png)
 
 As a model iterates through its process it gets better at perceiving the data. This is called **model training** and runs until at least 1 of 3 conditions are satisfied:
 1. The perceptron model exceeda a predefined performance threshold.
