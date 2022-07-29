@@ -6,6 +6,8 @@ Set of algorithms modeled after the human brain (neurons). Basic structure is **
 - one-hot-encoding for categorical variables (however this can be memory-intensive if there are a lot of unique values)
 - bucketing/binning collapses infrequent values into a single category ("other")
 
+![preprocessing]()
+
 Pros:
 - Can be very good at detecting complex, nonlinear relationships or patterns in data.
 - Good at handling messy or noisy data.
@@ -62,11 +64,12 @@ An **Activation function** is applied to the end of each neuron (or perceptron m
 **When a model doesn't perform as expected look at either 1) the model design (inadequate or inappropriate) or 2) the training data (insufficient or ineffective).**
 
 ### Optimizing a Neural Network
-- Verify input data
+- Verify input data, increase input data
 - Increase hidden layer neurons
 - Add more hidden layers (more computation on same amount of data*)
 - Try different activation functions for the hidden layers
 - Increase epochs for training regimen
+- Bucket or bin categorical data
 
 ### Keras
 
@@ -79,4 +82,8 @@ Using Tensorflow is a UI that then translates into Keras to build & run the neur
 
 ### Deep Neural Network
 2 or more hidden layers of nodes.
+Typically it's better to add more neurons than layers, but 3-5 max layers.
 
+RNN = Recurrent Neural Network (time series)
+GAN = Generative Adversarial Network
+CMM = Convolutional Neural Network (image/object recognition)
