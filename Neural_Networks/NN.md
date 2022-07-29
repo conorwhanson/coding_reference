@@ -1,7 +1,10 @@
-
 # Artificial Neural Networks (ANN)
 
 Set of algorithms modeled after the human brain (neurons). Basic structure is **nodes**.
+
+**Preprocessing data is crucial for NN.**
+- one-hot-encoding for categorical variables (however this can be memory-intensive if there are a lot of unique values)
+- bucketing/binning collapses infrequent values into a single category ("other")
 
 Pros:
 - Can be very good at detecting complex, nonlinear relationships or patterns in data.
@@ -76,3 +79,4 @@ Using Tensorflow is a UI that then translates into Keras to build & run the neur
 
 ### Deep Neural Network
 2 or more hidden layers of nodes.
+
