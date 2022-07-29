@@ -6,7 +6,7 @@ Set of algorithms modeled after the human brain (neurons). Basic structure is **
 - one-hot-encoding for categorical variables (however this can be memory-intensive if there are a lot of unique values)
 - bucketing/binning collapses infrequent values into a single category ("other")
 
-![preprocessing]()
+![preprocessing](https://github.com/conorwhanson/coding_reference/blob/main/Neural_Networks/resources/preprocessing_for_ML.png)
 
 Pros:
 - Can be very good at detecting complex, nonlinear relationships or patterns in data.
@@ -87,3 +87,11 @@ Typically it's better to add more neurons than layers, but 3-5 max layers.
 RNN = Recurrent Neural Network (time series)
 GAN = Generative Adversarial Network
 CMM = Convolutional Neural Network (image/object recognition)
+
+### Computer Vision
+Takes an image and turns it into pixels; all pixels have a value.
+
+### Transfer Learning in Computer Vision
+Take layers from someone else's computer vision to be adapted to our particular use.
+
+Image Augmentation: take a dataset of images, double or triple it in size by augmenting the images (zoom in, out, adjust contrast, crop, etc). This can train the model on different augmentations of the same image.
