@@ -96,8 +96,10 @@ Take layers from someone else's computer vision to be adapted to our particular 
 
 Image Augmentation: take a dataset of images, double or triple it in size by augmenting the images (zoom in, out, adjust contrast, crop, etc). This can train the model on different augmentations of the same image.
 
-### Accessing trained models
+### Accessing trained models & saving
 TensorFlow contains a feature (thanks to Keras) called `ModelCheckpoint`. This saves the model weights after the model runs a set number of data points. Those weights can then be reloaded and model training can continue. This process has a number of benefits:
 - If the model looks like it's overfitting we can stop it.
 - If there is a computer/power failure then we can revert to a checkpoint and continue the training.
 - Previous checkpoints can be restored to access model weight coefficients which can revert overfitting.
+
+*Saving** entire models can be done with Keras `save` feature. It saves to a Hierarchical Data Format file (HDF5). This can be loaded in with Keras `load_model`.
