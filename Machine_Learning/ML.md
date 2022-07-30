@@ -11,10 +11,11 @@ Basic ML flow:
 
 OR
 
-1. Model
-2. Fit(train)
+1. Preprocess data
+2. Model
+3. Fit(train)
     - watch for overfitting! This indicates the training set is finding patterns that are not present in the data set.
-3. Predict
+4. Predict
 
 #### Generally there are 3 ML categories:
 
@@ -29,7 +30,7 @@ OR
 
         Multiple Linear Regression can be used for multiple features.
 
-    - Classification: prediction probability based on discrete outcomes where outcome is assigned to a class (either in the class or out, Y or N. **Must clear a probability cutoff point**). Primarily differentiated from regression by a binary outcome (often called Logistic Regression). Stratifing the data here is important, especially if the input/output are disproportionate.
+    - Classification: prediction probability based on discrete outcomes where outcome is assigned to a class (either in the class or out, Y or N. **Must clear a probability cutoff point**). Based on the **sigmoid activation function**. Primarily differentiated from regression by a binary outcome (often called Logistic Regression). Stratifing the data here is important, especially if the input/output are disproportionate.
 
         - basic steps for logistic regression:
         1. Create the model with LinearRegression()
