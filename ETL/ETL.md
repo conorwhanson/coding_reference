@@ -10,7 +10,7 @@ Raw data to cleaned and database pipeline
 lambda arguments : expression
 
 - Regular expressions (regex): search/filter a string for all occurrences of a reg ex and returns matches. These can be used to match patterns. This goes beyond Python to all coding languages, text editors, etc. Typically represented by .*
-    - Wildcards: the dot wildcard (e.g. .ought will return 'bought,' 'ought') allows us to match any chracter. ONLY APPLYS TO LETTER PRECEDING****
+    - Wildcards: the dot wildcard (e.g. .ought will return 'bought,' 'ought') allows us to match any character. ONLY APPLYS TO LETTER PRECEDING****
     - Sets: allows us to match character contained within square brackets (e.g. [bfs]ought)
     - Escaping: allows us to target characters used in regex (e.g. 'bought\.' so it doesn't use the dot)
     - In Pandas, str.contains() works only in Pandas dataframes but references regex's; importing regex as the specific module works on other things.
