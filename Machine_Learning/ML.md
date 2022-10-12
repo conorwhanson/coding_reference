@@ -1,5 +1,5 @@
 ## Machine Learning Fundamentals
-Using statistical algorithms to perform tasks, but specifically to learn from data **patterns** for making future predictions. Machine Learning is fundamentally about **predictive analytics**.
+Using statistical algorithms to perform tasks, but specifically to learn **patterns** from data for making future predictions. Machine Learning is fundamentally about **predictive analytics**.
 
 What does it mean for a machine to "learn"? **The ML algorithms use training data to set their internal parameters.**
 
