@@ -2,7 +2,7 @@ Order of Operations: Parentheses, Expontentiation, Multiply/Divide, Add/Subtract
 
 Tuples are immuatble
 
-Dictionaries store collection of data in key-value pairs (key:value)). Dictionaries must always be strings. Syntax is {}
+Dictionaries store collection of data in key-value pairs (key:value). Dictionaries must always be strings. Syntax is {}
 
 Extract data from dictionary with a key
 
