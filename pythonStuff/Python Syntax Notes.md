@@ -28,3 +28,11 @@ else condition4:
 When printing items from a list or dictionary, use f string:
 e.g. print("blah blah blah " + str(int) + " blah blah")
 with f string: print(f"blah blah blah {int, calculation, etc} blah blah")
+
+### List comprehensions
+`new_list = [i * 2 for i in old_list]`
+               ^ Logic in front (calculating values)
+
+`new_list = [i * 2 for i in old_list if i % 2 == 0]`
+                                     ^ Filtering happens at end
+                                
