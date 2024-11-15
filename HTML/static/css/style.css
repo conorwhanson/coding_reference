@@ -1,0 +1,27 @@
+/* bare HTML element
+body { 
+    property: prop;
+}
+
+styling by CLASS (e.g. .name - <p class="name" />
+.content { 
+    property: prop;
+}
+
+Hierarchies (first is container, rest to things within that container; # is id
+.nav ul.dropdown > #profile_image {
+    width: 64px;
+}
+
+Inheritance/overriding (combing w/o spaces for AND operations)
+.content.lead {
+    font-size: 18px;
+    padding: 30px;
+}
+*/
+
+body {
+    font-family: 'Gill Sans';
+    color: #36807d;
+    background: #202020;
+}
