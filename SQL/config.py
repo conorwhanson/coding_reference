@@ -1,0 +1,5 @@
+dbName = "ACETdb1"
+username = "chACET"
+pw = "<4}g-?paj1e4w#<A%W"
+port = "5432"
+host = "acetdb1.cvoui6ww6k2c.us-east-1.rds.amazonaws.com"

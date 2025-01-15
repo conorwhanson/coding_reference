@@ -1,8 +1,8 @@
 # SQL Database and Queries
-Structured Query Language (SQL) a language used to ask questions of data and receive answers. It is made for handling large amounts of data and allows us to Extract, Transform, and Load data into databases(ETL).
+Structured Query Language (SQL) a language used to ask questions of data and receive answers. It is made for handling large amounts of data and allows us to Extract, Transform, and Load data into databases (ETL).
 
 PostgreSQL is (1 flavor of) an object-relational database that uses SQL.
-PGAdmin is a management tool that gives access to the databases and from which one can query the data (only works with PostgreSQL).
+PGAdmin is a UI management tool that gives access to the databases and from which one can query the data (only works with PostgreSQL).
 
 Entity Relationship Diagram (ERD) is a kind of flow chart that spotlights the different tables and their relationships to other tables via primary keys, foreign kets, and data types for the various columns. It provides a big-picture look at the data.
 
