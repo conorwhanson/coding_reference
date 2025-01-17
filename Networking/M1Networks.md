@@ -68,3 +68,14 @@ LC, ST, SC connector types.
 
 ### Wired/Wireless comparison
 ![Network Comparison!](/Networking/wiredWireless.png)
+
+### Latest network trends
+WiFi 6 gives faster throughput speeds, better battery life, less congestion
+
+Network Analytics uses AI/ML for insight and debugging
+
+Network Automation for automating operations.
+
+SASE (secure access service edge) addresses combined network/security challenges.
+
+### Pros/Cons of Network Types
