@@ -27,7 +27,7 @@ All devices that can send, receive, or create info on network are nodes.
 
 **Modem** converts data into a format that is easy to transmit across network. When data reaches its destination the modem converts it to OG form. Most common are cable and DSL.
 
-**Bridge** joins 2 separate networks so they can communicate and work as a singel network. Can be wired or wireless.
+**Bridge** joins 2 separate networks so they can communicate and work as a single network. Can be wired or wireless.
 
 **Gateway** is hardware or software that allows data to flow from one network to another (e.g., home network to internet).
 
