@@ -1,4 +1,4 @@
-dbName = "ACETdb1"
+dbName = "acetdb1"
 username = "chACET"
 pw = "<4}g-?paj1e4w#<A%W"
 port = "5432"
