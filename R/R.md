@@ -96,7 +96,7 @@ How does this represent the population dataset?? **Compare mean & standard devia
 (do this via sample() or sample_n() from dplyr library)
 
 ### Correlation
-How strongly or weakly two variables are related. Calculated with correlation coefficient (denoted as r, negative or positive depending on direction of relationship)
+How strongly or weakly two variables are related. Calculated with correlation coefficient (denoted as *r* between -1 and 1; negative or positive depending on direction of relationship)
 
 ![correlation](https://github.com/conorwhanson/coding_reference/blob/main/R/resources/Pearson_corr_coeff.png)
 
