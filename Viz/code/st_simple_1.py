@@ -12,9 +12,8 @@ fig = px.histogram(
     color="class_summary",
     labels={"fuelCost08": "Annual Fuel Cost"},
     nbins=40,
-    title="Fuel Cost Distribution",
+    title="Fuel Cost Distribution 1",
 )
 
 st.title("Simple Example")
 st.write(fig)
-

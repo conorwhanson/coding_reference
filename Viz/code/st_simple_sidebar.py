@@ -2,10 +2,9 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 import plotly.express as px
-import altair as alt
 
 
-@st.cache()
+@st.cache_data()
 def load_data():
     src_file = Path.cwd() / "data" / "raw" / "EPA_fuel_economy_summary.csv"
     raw_df = pd.read_csv(src_file)
@@ -56,13 +55,5 @@ fig = px.histogram(
     title="Fuel Cost Distribution",
 )
 
-altair_chart = (
-    alt.Chart(plot_df)
-    .mark_tick()
-    .encode(y="fuel_type_summary", x="barrels08")
-    .properties(width=600)
-)
-
 # Display the output results
 st.write(fig)
-st.write(altair_chart)
