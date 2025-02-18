@@ -5,7 +5,7 @@ import plotly.express as px
 
 app = Dash(__name__)
 
-src_file = Path.cwd() / "data" / "raw" / "EPA_fuel_economy_summary.csv"
+src_file = Path.cwd() / "Viz" / "code" / "data" / "raw" / "EPA_fuel_economy_summary.csv"
 df = pd.read_csv(src_file)
 
 fig = px.histogram(
@@ -18,12 +18,10 @@ fig = px.histogram(
 )
 
 app.layout = html.Div(children=[
-    html.H1("Simple Histogram"),
-    html.Div("Annual Fuel Cost Plot."),
+    html.H1("Simple Histogram", style = {"textAlign": "center"}),
+    html.Div("Annual Fuel Cost Plot.", style = {"textAlign": "center"}),
     dcc.Graph(id="example-histogram", figure=fig),
 ])
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
-
-
+    app.run(debug=True)

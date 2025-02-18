@@ -9,7 +9,7 @@ app = Dash(__name__, external_stylesheets=external_stylesheets)
 
 styles = {"pre": {"border": "thin lightgrey solid", "overflowX": "scroll"}}
 
-src_file = Path.cwd() / "data" / "raw" / "EPA_fuel_economy_summary.csv"
+src_file = Path.cwd() / "Viz" / "code" / "data" / "raw" / "EPA_fuel_economy_summary.csv"
 df = pd.read_csv(src_file)
 
 # Define the input parameters
@@ -134,4 +134,4 @@ def update_figure(year_range, transmission_list, selectedData, n_clicks):
 
 
 if __name__ == "__main__":
-    app.run_server(debug=True)  
+    app.run(debug=True)  

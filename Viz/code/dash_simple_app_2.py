@@ -6,7 +6,7 @@ import plotly.express as px
 
 app = Dash(__name__)
 
-src_file = Path.cwd() / "data" / "raw" / "EPA_fuel_economy_summary.csv"
+src_file = Path.cwd() / "Viz" / "code" / "data" / "raw" / "EPA_fuel_economy_summary.csv"
 df = pd.read_csv(src_file)
 fuel_types = df["fuel_type_summary"].unique()
 
@@ -17,7 +17,7 @@ app.layout = html.Div(
         dcc.Graph(id="histogram"),
         dcc.Dropdown(
             id="fuel_id",
-            options=[{"label": i, "value": i} for i in fuel_types],
+            options=[i for i in fuel_types],
             value=[i for i in fuel_types],
             multi=True,
         ),
@@ -38,6 +38,6 @@ def update_output(fuel_list):
     return fig
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run(debug=True)
 
 
