@@ -1,5 +1,0 @@
-dbName = "acetdbtest"
-username = "chACET"
-pw = "<4}g-?paj1e4w#<A%W"
-port = "5432"
-host = "acetdbtest.ctgsykakembn.us-east-1.rds.amazonaws.com"

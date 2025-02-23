@@ -1,0 +1,5 @@
+dbName = "dbyeet"
+username = "cwh221"
+pw = "<4}g-?paj1e4w#<A%W"
+port = "5432"
+host = "dbyeet.cbg60sggun8b.us-east-2.rds.amazonaws.com"
