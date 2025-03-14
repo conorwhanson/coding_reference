@@ -42,8 +42,6 @@ function printHello(){
 	console.log("Hello there!");
 }
 
-return 
-
 ## JS Conditionals
 
 Basic structure of JS conditionals:
@@ -77,7 +75,7 @@ Use a forEach loop to iterate through array (numbers) and square each one:
 	let numbers = [1,2,3,4,5,6];
 	numbers.forEach(function (element) {
 		console.log(element **2);
-	});
+	}));
 
 ## JS has 3 different equal signs: 
 
@@ -90,11 +88,11 @@ Use a forEach loop to iterate through array (numbers) and square each one:
 JS Array === Python list
 JS Objects === Python dicts
 
-In JS dicts you can use dot notation (e.g. dict.name instead of dict['name'] like in Python
+In JS dicts you can use dot notation (e.g. dict.name instead of dict['name']) like in Python
 
 To retrieve key-value pairs as an array from a JS object: Object.entries(name_of_object)
 
-To retrieve each element of an array: forEach(
+To retrieve each element of an array: forEach()
 
 ## JS Libraries
 
