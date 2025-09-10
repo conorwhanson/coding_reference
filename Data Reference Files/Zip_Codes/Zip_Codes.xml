@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <pubdate>20230721</pubdate>
+                <title>Zip Codes</title>
+                <onlink>https://gis.hennepin.us/arcgis/rest/services/HennepinData/BOUNDARIES/MapServer/12</onlink>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>This dataset reflects the zip code boundaries that are based on the physical address of the Hennepin County parcel attribute. These data are maintained on an as-needed basis and are to be used as a general approximation of the area serviced by the U.S. Postal Service. It is important to note that Hennepin County has decided to not use the U.S. Census Zip Code Tabulation Area (ZCTA) dataset as it is not as accurate as our parcel-based data.</abstract>
+            <purpose>This dataset reflects the zip code boundaries which are based on the Hennepin County parcel attributes of physical mailing address.</purpose>
+        </descript>
+        <keywords>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>openData_Boundaries</themekey>
+            </theme>
+        </keywords>
+        <accconst>Other Constraints</accconst>
+        <useconst>This data (i) is furnished &amp;quot;AS IS&amp;quot; with no representation as to completeness or accuracy; (ii) is furnished with no warranty of any kind; and (iii) is not suitable for legal, engineering or surveying purposes. Hennepin County shall not be liable for any damage, injury or loss resulting from this data.</useconst>
+        <datacred>Hennepin GIS</datacred>
+    </idinfo>
+    <metainfo>
+        <metd>20230721</metd>
+        <metc>
+            <cntinfo>
+                <!--no contact person or organization name available-->
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>
